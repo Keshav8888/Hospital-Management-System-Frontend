@@ -8,6 +8,9 @@ import AdminDoctors from "./pages/admin/AdminDoctors";
 import DoctorDetails from "./pages/admin/DoctorDetails";
 import AddDoctor from "./pages/admin/AddDoctor";
 import EditDoctor from "./pages/admin/EditDoctor";
+import AdminPatients from "./pages/admin/AdminPatients";
+import PatientDetails from "./pages/admin/PatientDetails";
+import EditPatient from "./pages/admin/EditPatient";
 
 function App() {
     return (
@@ -38,6 +41,21 @@ function App() {
             <Route
                 path="/admin/doctors/:id/edit"
                 element={<EditDoctor />}
+            />
+
+            <Route
+                path="/admin/patients"
+                element={<AdminPatients />}
+            />
+
+            <Route
+                path="/admin/patients/:id"
+                element={<PatientDetails />}
+            />
+
+            <Route
+                path="/admin/patients/:id/edit"
+                element={<EditPatient />}
             />
 
             <Route
