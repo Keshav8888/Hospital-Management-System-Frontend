@@ -11,6 +11,14 @@ import EditDoctor from "./pages/admin/EditDoctor";
 import AdminPatients from "./pages/admin/AdminPatients";
 import PatientDetails from "./pages/admin/PatientDetails";
 import EditPatient from "./pages/admin/EditPatient";
+import AdminReceptionists from "./pages/admin/AdminReceptionists";
+import AddReceptionist from "./pages/admin/AddReceptionist";
+import ReceptionistDetails from "./pages/admin/ReceptionistDetails";
+import EditReceptionist from "./pages/admin/EditReceptionist";
+import AdminDepartments from "./pages/admin/AdminDepartments";
+import AddDepartment from "./pages/admin/AddDepartment";
+import DepartmentDetails from "./pages/admin/DepartmentDetails";
+import EditDepartment from "./pages/admin/EditDepartment";
 
 function App() {
     return (
@@ -56,6 +64,46 @@ function App() {
             <Route
                 path="/admin/patients/:id/edit"
                 element={<EditPatient />}
+            />
+
+            <Route
+                path="/admin/receptionists"
+                element={<AdminReceptionists />}
+            />
+
+            <Route
+                path="/admin/receptionists/add"
+                element={<AddReceptionist />}
+            />
+
+            <Route
+                path="/admin/receptionists/:id/edit"
+                element={<EditReceptionist />}
+            />
+
+            <Route
+                path="/admin/receptionists/:id"
+                element={<ReceptionistDetails />}
+            />
+
+            <Route
+                path="/admin/departments"
+                element={<AdminDepartments />}
+            />
+
+            <Route
+                path="/admin/departments/add"
+                element={<AddDepartment />}
+            />
+
+            <Route
+                path="/admin/departments/:id/edit"
+                element={<EditDepartment />}
+            />
+
+            <Route
+                path="/admin/departments/:id"
+                element={<DepartmentDetails />}
             />
 
             <Route

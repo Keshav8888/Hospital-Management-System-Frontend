@@ -24,11 +24,15 @@ function Login() {
         setError("");
         setLoading(true);
 
+        localStorage.removeItem("token");
+        localStorage.removeItem("email");
+        localStorage.removeItem("role");
+
         try {
 
             const loginData = {
-                email: email,
-                password: password
+                email,
+                password
             };
 
             const response = await loginUser(loginData);
@@ -60,19 +64,7 @@ function Login() {
 
             console.error("Login failed:", error);
 
-            if (error.response) {
-
-                setError(
-                    error.response.data?.message ||
-                    "Invalid email or password."
-                );
-
-            } else {
-
-                setError(
-                    "Unable to connect to the server."
-                );
-            }
+            setError(error.response.data?.message || "Invalid email or password.");
 
         } finally {
 

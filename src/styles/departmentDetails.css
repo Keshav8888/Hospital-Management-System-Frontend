@@ -1,0 +1,161 @@
+.department-details-page {
+    min-height: 100vh;
+    background-color: #f5f7fb;
+    padding: 40px 30px;
+    box-sizing: border-box;
+}
+
+.department-details-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.department-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.department-details-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.department-details-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.department-back-button {
+    padding: 10px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background-color: #ffffff;
+    color: #374151;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.department-back-button:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+.department-details-card {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.department-detail-row {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    align-items: center;
+
+    padding: 18px 25px;
+
+    border-bottom: 1px solid #edf0f2;
+}
+
+.department-detail-row:last-child {
+    border-bottom: none;
+}
+
+.department-detail-row span:first-child {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.department-detail-row strong {
+    color: #1f2937;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.department-description-row {
+    align-items: start;
+}
+
+.department-status {
+    width: fit-content;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.department-status-active {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.department-status-inactive {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.department-details-message {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #6b7280;
+
+    font-size: 18px;
+}
+
+@media (max-width: 700px) {
+
+    .department-details-page {
+        padding: 20px 15px;
+    }
+
+    .department-details-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .department-detail-row {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+}
