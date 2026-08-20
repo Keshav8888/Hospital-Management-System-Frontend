@@ -1,0 +1,185 @@
+.edit-receptionist-patient-page {
+    min-height: 100vh;
+    background-color: #f5f7fb;
+    padding: 40px 30px;
+    box-sizing: border-box;
+}
+
+.edit-receptionist-patient-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.edit-receptionist-patient-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.edit-receptionist-patient-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.edit-receptionist-patient-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.edit-receptionist-patient-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.patient-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-form-group label {
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.patient-form-group input,
+.patient-form-group select,
+.patient-form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #1f2937;
+    font-size: 14px;
+    outline: none;
+}
+
+.patient-form-group input:focus,
+.patient-form-group select:focus,
+.patient-form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.patient-form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.patient-full-width {
+    grid-column: 1 / -1;
+}
+
+.patient-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.patient-cancel-button,
+.patient-update-button {
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.patient-cancel-button {
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #374151;
+}
+
+.patient-cancel-button:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+.patient-update-button {
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.20);
+}
+
+.patient-update-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.patient-update-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.patient-form-error {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 7px;
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.patient-form-success {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 7px;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.edit-receptionist-patient-message {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+}
+
+@media (max-width: 700px) {
+
+    .edit-receptionist-patient-page {
+        padding: 20px 15px;
+    }
+
+    .edit-receptionist-patient-container {
+        padding: 20px;
+    }
+
+    .edit-receptionist-patient-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .edit-receptionist-patient-form {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-full-width {
+        grid-column: auto;
+    }
+
+    .patient-form-actions {
+        grid-column: auto;
+        flex-direction: column;
+    }
+}

@@ -352,11 +352,12 @@
 @media (max-width: 768px) {
 
     .doctors-main {
+        width: 100%;
         margin-left: 0;
     }
 
     .doctors-content {
-        padding: 20px;
+        padding: 20px 16px;
     }
 
     .doctors-header {
@@ -372,7 +373,7 @@
     }
 
     .doctor-search-form {
-        width: 100%;
+        flex-direction: column;
     }
 
     .doctor-search-input {

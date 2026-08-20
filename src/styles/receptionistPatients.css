@@ -1,0 +1,215 @@
+.receptionist-patients-page {
+    min-height: 100vh;
+    background-color: #f5f7fb;
+}
+
+.receptionist-patients-main {
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    margin-left: 240px;
+}
+
+.receptionist-patients-content {
+    padding: 32px;
+}
+
+.receptionist-patients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.receptionist-patients-header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 30px;
+}
+
+.receptionist-patients-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+}
+
+.register-patient-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.register-patient-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.receptionist-patients-toolbar {
+    margin-bottom: 20px;
+    padding: 18px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.receptionist-patient-search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.receptionist-patient-search-input {
+    width: 380px;
+    padding: 11px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+}
+
+.receptionist-patient-search-input:focus {
+    border-color: #2563eb;
+}
+
+.receptionist-patient-search-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.receptionist-patients-table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.receptionist-patients-table {
+    width: 100%;
+    min-width: 1150px;
+    border-collapse: collapse;
+}
+
+.receptionist-patients-table th {
+    padding: 15px;
+    background: #f8fafc;
+    color: #374151;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.receptionist-patients-table td {
+    padding: 15px;
+    color: #4b5563;
+    font-size: 14px;
+    border-bottom: 1px solid #eef0f2;
+}
+
+.receptionist-patients-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.sortable-header {
+    cursor: pointer;
+}
+
+.receptionist-patient-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.receptionist-patient-status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.receptionist-patient-status-inactive {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.receptionist-patient-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.receptionist-patient-actions button {
+    padding: 7px 11px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.receptionist-patient-actions button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.receptionist-patients-empty {
+    padding: 40px;
+    text-align: center;
+}
+
+.receptionist-patients-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-top: 1px solid #eef0f2;
+}
+
+.receptionist-patients-message {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+
+    .receptionist-patients-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .receptionist-patients-content {
+        padding: 20px 16px;
+    }
+
+    .receptionist-patients-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .receptionist-patient-search-form {
+        flex-direction: column;
+    }
+
+    .receptionist-patient-search-input {
+        width: 100%;
+    }
+
+    .receptionist-patients-pagination {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

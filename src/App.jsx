@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import DoctorDashboard from "./pages/Doctor/DoctorDashboard";
 import PatientDashboard from "./pages/Patient/PatientDashboard";
-import ReceptionistDashboard from "./pages/Receptionist/ReceptionistDashboard";
+import ReceptionistDashboard from "./pages/receptionist/ReceptionistDashboard";
 import AdminDoctors from "./pages/admin/AdminDoctors";
 import DoctorDetails from "./pages/admin/DoctorDetails";
 import AddDoctor from "./pages/admin/AddDoctor";
@@ -19,6 +19,15 @@ import AdminDepartments from "./pages/admin/AdminDepartments";
 import AddDepartment from "./pages/admin/AddDepartment";
 import DepartmentDetails from "./pages/admin/DepartmentDetails";
 import EditDepartment from "./pages/admin/EditDepartment";
+import AdminAppointments from "./pages/admin/AdminAppointments";
+import AdminAppointmentDetails from "./pages/admin/AdminAppointmentDetails";
+import AdminRescheduleAppointment from "./pages/admin/AdminRescheduleAppointment";
+import ReceptionistAppointments from "./pages/receptionist/ReceptionistAppointments";
+import ReceptionistPatients from "./pages/receptionist/ReceptionistPatients";
+import RegisterPatient from "./pages/receptionist/RegisterPatient";
+import ReceptionistPatientDetails from "./pages/receptionist/ReceptionistPatientDetails";
+import EditReceptionistPatient from "./pages/receptionist/EditReceptionistPatient";
+
 
 function App() {
     return (
@@ -107,6 +116,21 @@ function App() {
             />
 
             <Route
+                path="/admin/appointments"
+                element={<AdminAppointments />}
+            />
+
+            <Route
+                path="/admin/appointments/:id/reschedule"
+                element={<AdminRescheduleAppointment />}
+            />
+
+            <Route
+                path="/admin/appointments/:id"
+                element={<AdminAppointmentDetails />}
+            />
+
+            <Route
                 path="/doctor/dashboard"
                 element={<DoctorDashboard />}
             />
@@ -119,6 +143,31 @@ function App() {
             <Route
                 path="/receptionist/dashboard"
                 element={<ReceptionistDashboard />}
+            />
+
+            <Route
+                path="/receptionist/appointments"
+                element={<ReceptionistAppointments />}
+            />
+
+            <Route
+                path="/receptionist/patients"
+                element={<ReceptionistPatients />}
+            />
+
+            <Route
+                path="/receptionist/patients/add"
+                element={<RegisterPatient />}
+            />
+
+            <Route
+                path="/receptionist/patients/:id/edit"
+                element={<EditReceptionistPatient />}
+            />
+
+            <Route
+                path="/receptionist/patients/:id"
+                element={<ReceptionistPatientDetails />}
             />
 
         </Routes>
