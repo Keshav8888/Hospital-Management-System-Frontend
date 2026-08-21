@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/admin/AdminDashboard";
-import PatientDashboard from "./pages/Patient/PatientDashboard";
+import PatientDashboard from "./pages/patient/PatientDashboard";
 import ReceptionistDashboard from "./pages/receptionist/ReceptionistDashboard";
 import AdminDoctors from "./pages/admin/AdminDoctors";
 import DoctorDetails from "./pages/admin/DoctorDetails";
@@ -38,31 +38,70 @@ import DoctorAppointmentHistory from "./pages/doctor/DoctorAppointmentHistory";
 import DoctorAppointmentDetails from "./pages/doctor/DoctorAppointmentDetails";
 import DoctorProfile from "./pages/doctor/DoctorProfile";
 import EditDoctorProfile from "./pages/doctor/EditDoctorProfile";
+import PatientAppointments from "./pages/patient/PatientAppointments";
+import PatientProfile from "./pages/patient/PatientProfile";
+import BookPatientAppointment from "./pages/patient/BookPatientAppointment";
+import PatientAppointmentDetails from "./pages/patient/PatientAppointmentDetails";
+import EditPatientProfile from "./pages/patient/EditPatientProfile";
+
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
 
-      <Route path="/admin/dashboard" element={<AdminDashboard />} />
+      <Route path="/" 
+        element={<Login />} 
+      />
 
-      <Route path="/admin/doctors" element={<AdminDoctors />} />
+      <Route 
+        path="/admin/dashboard" 
+        element={<AdminDashboard />} 
+      />
 
-      <Route path="/admin/doctors/:id" element={<DoctorDetails />} />
+      <Route 
+        path="/admin/doctors" 
+        element={<AdminDoctors />} 
+      />
 
-      <Route path="/admin/doctors/add" element={<AddDoctor />} />
+      <Route 
+        path="/admin/doctors/:id" 
+        element={<DoctorDetails />} 
+      />
 
-      <Route path="/admin/doctors/:id/edit" element={<EditDoctor />} />
+      <Route 
+        path="/admin/doctors/add" 
+        element={<AddDoctor />} 
+      />
 
-      <Route path="/admin/patients" element={<AdminPatients />} />
+      <Route 
+        path="/admin/doctors/:id/edit" 
+        element={<EditDoctor />} 
+      />
 
-      <Route path="/admin/patients/:id" element={<PatientDetails />} />
+      <Route 
+        path="/admin/patients" 
+        element={<AdminPatients />} 
+      />
 
-      <Route path="/admin/patients/:id/edit" element={<EditPatient />} />
+      <Route 
+        path="/admin/patients/:id" 
+        element={<PatientDetails />} 
+      />
 
-      <Route path="/admin/receptionists" element={<AdminReceptionists />} />
+      <Route 
+        path="/admin/patients/:id/edit" 
+        element={<EditPatient />} 
+      />
 
-      <Route path="/admin/receptionists/add" element={<AddReceptionist />} />
+      <Route 
+        path="/admin/receptionists" 
+        element={<AdminReceptionists />} 
+      />
+
+      <Route 
+        path="/admin/receptionists/add" 
+        element={<AddReceptionist />} 
+      />
 
       <Route
         path="/admin/receptionists/:id/edit"
@@ -74,15 +113,30 @@ function App() {
         element={<ReceptionistDetails />}
       />
 
-      <Route path="/admin/departments" element={<AdminDepartments />} />
+      <Route 
+        path="/admin/departments" 
+        element={<AdminDepartments />} 
+      />
 
-      <Route path="/admin/departments/add" element={<AddDepartment />} />
+      <Route 
+        path="/admin/departments/add" 
+        element={<AddDepartment />} 
+      />
 
-      <Route path="/admin/departments/:id/edit" element={<EditDepartment />} />
+      <Route 
+        path="/admin/departments/:id/edit" 
+        element={<EditDepartment />} 
+      />
 
-      <Route path="/admin/departments/:id" element={<DepartmentDetails />} />
+      <Route 
+        path="/admin/departments/:id" 
+        element={<DepartmentDetails />} 
+      />
 
-      <Route path="/admin/appointments" element={<AdminAppointments />} />
+      <Route 
+        path="/admin/appointments" 
+        element={<AdminAppointments />} 
+      />
 
       <Route
         path="/admin/appointments/:id/reschedule"
@@ -95,39 +149,67 @@ function App() {
       />
 
         <Route 
-            path="/doctor/dashboard" 
-            element={<DoctorDashboard />} 
+          path="/doctor/dashboard" 
+          element={<DoctorDashboard />} 
         />
         <Route
-            path="/doctor/appointments"
-            element={<DoctorAppointments />}
+          path="/doctor/appointments"
+          element={<DoctorAppointments />}
         />
 
         <Route
-            path="/doctor/appointments/today"
-            element={<DoctorTodayAppointments />}
+          path="/doctor/appointments/today"
+          element={<DoctorTodayAppointments />}
         />
 
         <Route
-            path="/doctor/appointments/history"
-            element={<DoctorAppointmentHistory />}
+          path="/doctor/appointments/history"
+          element={<DoctorAppointmentHistory />}
         />
 
         <Route
-            path="/doctor/appointments/:id"
-            element={<DoctorAppointmentDetails />}
+          path="/doctor/appointments/:id"
+          element={<DoctorAppointmentDetails />}
         />
 
         <Route
-            path="/doctor/profile"
-            element={<DoctorProfile />}
+          path="/doctor/profile"
+          element={<DoctorProfile />}
         />
 
-        <Route
-            path="/doctor/profile/edit"
-            element={<EditDoctorProfile />}
-        />
-      <Route path="/patient/dashboard" element={<PatientDashboard />} />
+      <Route
+          path="/doctor/profile/edit"
+          element={<EditDoctorProfile />}
+      />
+      <Route
+        path="/patient/dashboard"
+        element={<PatientDashboard />}
+      />
+
+      <Route
+        path="/patient/appointments"
+        element={<PatientAppointments />}
+      />
+
+      <Route
+        path="/patient/appointments/book"
+        element={<BookPatientAppointment />}
+      />
+
+      <Route
+        path="/patient/appointments/:id"
+        element={<PatientAppointmentDetails />}
+      />
+
+      <Route
+        path="/patient/profile"
+        element={<PatientProfile />}
+      />
+
+      <Route
+        path="/patient/profile/edit"
+        element={<EditPatientProfile />}
+      />
 
       <Route
         path="/receptionist/dashboard"
@@ -154,16 +236,25 @@ function App() {
         element={<BookAppointment />}
       />
 
-      <Route path="/receptionist/profile" element={<ReceptionistProfile />} />
+      <Route 
+        path="/receptionist/profile" 
+        element={<ReceptionistProfile />} 
+      />
 
       <Route
         path="/receptionist/profile/edit"
         element={<EditReceptionistProfile />}
       />
 
-      <Route path="/receptionist/patients" element={<ReceptionistPatients />} />
+      <Route 
+        path="/receptionist/patients" 
+        element={<ReceptionistPatients />} 
+      />
 
-      <Route path="/receptionist/patients/add" element={<RegisterPatient />} />
+      <Route 
+        path="/receptionist/patients/add" 
+        element={<RegisterPatient />} 
+      />
 
       <Route
         path="/receptionist/patients/:id/edit"
