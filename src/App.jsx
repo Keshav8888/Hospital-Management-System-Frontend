@@ -43,13 +43,18 @@ import PatientProfile from "./pages/patient/PatientProfile";
 import BookPatientAppointment from "./pages/patient/BookPatientAppointment";
 import PatientAppointmentDetails from "./pages/patient/PatientAppointmentDetails";
 import EditPatientProfile from "./pages/patient/EditPatientProfile";
-
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <Routes>
 
-      <Route path="/" 
+    <Route
+        path="/"
+        element={<LandingPage />}
+    />
+
+      <Route path="/login" 
         element={<Login />} 
       />
 

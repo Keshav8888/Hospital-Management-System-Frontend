@@ -28,6 +28,7 @@ function EditPatientProfile() {
         dateOfBirth: "",
         phone: "",
         bloodGroup: "",
+        emergencyContact: "",
         address: "",
         allergies: "",
         medicalHistory: ""
@@ -358,6 +359,22 @@ function EditPatientProfile() {
                                     }
                                     maxLength="10"
                                     required
+                                />
+
+                            </div>
+
+                            <div className="patient-profile-form-group">
+
+                                <label>
+                                    Emergency Contact
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="emergencyContact"
+                                    value={formData.emergencyContact}
+                                    onChange={handleChange}
+                                    maxLength="10"
                                 />
 
                             </div>

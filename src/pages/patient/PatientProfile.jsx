@@ -151,13 +151,13 @@ function PatientProfile() {
                             </strong>
                         </div>
 
-                        {/* <div className="patient-profile-row">
+                        <div className="patient-profile-row">
                             <span>Name</span>
                             <strong>
                                 {profile.firstName}{" "}
                                 {profile.lastName}
                             </strong>
-                        </div> */}
+                        </div>
 
                         <div className="patient-profile-row">
                             <span>Email</span>
@@ -197,8 +197,7 @@ function PatientProfile() {
                         <div className="patient-profile-row">
                             <span>Emergency Contact</span>
                             <strong>
-                                {profile.emergencyContact ||
-                                    "Not provided"}
+                                {profile.emergencyContact || "Not provided"}
                             </strong>
                         </div>
 
