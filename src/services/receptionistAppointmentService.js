@@ -34,6 +34,15 @@ export const getReceptionistTodaysAppointments = async () => {
     return response.data;
 };
 
+export const getReceptionistAppointmentById = async (id) => {
+
+    const response = await api.get(
+        `/api/receptionist/appointments/${id}`
+    );
+
+    return response.data;
+};
+
 
 export const bookReceptionistAppointment = async (
     appointmentData
@@ -68,6 +77,22 @@ export const rescheduleReceptionistAppointment = async (
     const response = await api.put(
         `/api/receptionist/appointments/${id}/reschedule`,
         appointmentData
+    );
+
+    return response.data;
+};
+
+export const getReceptionistDoctors = async (
+    departmentId = null
+) => {
+
+    const response = await api.get(
+        "/api/receptionist/doctors",
+        {
+            params: departmentId
+                ? { departmentId }
+                : {}
+        }
     );
 
     return response.data;

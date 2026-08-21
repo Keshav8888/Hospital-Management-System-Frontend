@@ -1,0 +1,266 @@
+.edit-receptionist-profile-page {
+    min-height: 100vh;
+
+    background-color: #f5f7fb;
+}
+
+.edit-receptionist-profile-main {
+    width: calc(100% - 240px);
+
+    min-height: 100vh;
+
+    margin-left: 240px;
+}
+
+.edit-receptionist-profile-content {
+    padding: 32px;
+}
+
+.edit-receptionist-profile-container {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.edit-receptionist-profile-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.edit-receptionist-profile-header h1 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 30px;
+}
+
+.edit-receptionist-profile-header p {
+    margin: 6px 0 0;
+
+    color: #6b7280;
+}
+
+.profile-back-button {
+    padding: 10px 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    color: #374151;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.profile-back-button:hover {
+    background-color: #f3f4f6;
+
+    border-color: #9ca3af;
+
+    transform: translateY(-1px);
+}
+
+.edit-receptionist-profile-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.profile-form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.profile-form-group label {
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.profile-form-group input,
+.profile-form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    color: #1f2937;
+
+    outline: none;
+}
+
+.profile-form-group input:focus,
+.profile-form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.profile-form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.profile-cancel-button,
+.profile-update-button {
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.profile-cancel-button {
+    border: 1px solid #d1d5db;
+
+    background-color: #ffffff;
+
+    color: #374151;
+}
+
+.profile-cancel-button:hover {
+    background-color: #f3f4f6;
+
+    border-color: #9ca3af;
+
+    transform: translateY(-1px);
+}
+
+.profile-update-button {
+    border: none;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 14px rgba(37, 99, 235, 0.20);
+}
+
+.profile-update-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.profile-update-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+.profile-form-error,
+.profile-form-success {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+}
+
+.profile-form-error {
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.profile-form-success {
+    background-color: #dcfce7;
+
+    color: #166534;
+}
+
+.edit-receptionist-profile-message {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+
+    .edit-receptionist-profile-main {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .edit-receptionist-profile-content {
+        padding: 20px 16px;
+    }
+
+    .edit-receptionist-profile-container {
+        padding: 20px;
+    }
+
+    .edit-receptionist-profile-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .edit-receptionist-profile-form {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form-actions {
+        grid-column: auto;
+
+        flex-direction: column;
+    }
+}

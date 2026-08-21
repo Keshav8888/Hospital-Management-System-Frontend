@@ -34,6 +34,15 @@ export const getActiveDepartments = async () => {
     return response.data;
 };
 
+export const getReceptionistActiveDepartments = async () => {
+
+    const response = await api.get(
+        "/api/receptionist/departments/active"
+    );
+
+    return response.data;
+};
+
 
 export const getDepartmentById = async (id) => {
 

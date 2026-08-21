@@ -8,12 +8,12 @@ import DoctorNavbar
     from "../../components/doctor/DoctorNavbar";
 
 import {
-    getDoctorAppointments
+    getDoctorTodaysAppointments
 } from "../../services/doctorAppointmentService";
 
 import "../../styles/doctorAppointments.css";
 
-function DoctorAppointments() {
+function DoctorTodayAppointments() {
 
     const navigate = useNavigate();
 
@@ -34,19 +34,19 @@ function DoctorAppointments() {
             setError("");
 
             const data =
-                await getDoctorAppointments();
+                await getDoctorTodaysAppointments();
 
             setAppointments(data || []);
 
         } catch (error) {
 
             console.error(
-                "Failed to load doctor appointments:",
+                "Failed to load today's appointments:",
                 error
             );
 
             setError(
-                "Unable to load appointments."
+                "Unable to load today's appointments."
             );
 
         } finally {
@@ -75,7 +75,7 @@ function DoctorAppointments() {
 
         return (
             <div className="doctor-appointments-message">
-                Loading appointments...
+                Loading today's appointments...
             </div>
         );
     }
@@ -100,6 +100,7 @@ function DoctorAppointments() {
 
 
     return (
+
         <div className="doctor-appointments-page">
 
             <DoctorSidebar
@@ -126,11 +127,11 @@ function DoctorAppointments() {
                         <div>
 
                             <h1>
-                                My Appointments
+                                Today's Appointments
                             </h1>
 
                             <p>
-                                Appointments assigned to you
+                                Patients scheduled for today
                             </p>
 
                         </div>
@@ -155,15 +156,11 @@ function DoctorAppointments() {
                                     </th>
 
                                     <th>
-                                        Department
-                                    </th>
-
-                                    <th>
-                                        Date
-                                    </th>
-
-                                    <th>
                                         Time
+                                    </th>
+
+                                    <th>
+                                        Reason
                                     </th>
 
                                     <th>
@@ -186,10 +183,11 @@ function DoctorAppointments() {
                                     <tr>
 
                                         <td
-                                            colSpan="7"
+                                            colSpan="6"
                                             className="doctor-appointments-empty"
                                         >
-                                            No appointments found.
+                                            No appointments scheduled
+                                            for today.
                                         </td>
 
                                     </tr>
@@ -219,19 +217,13 @@ function DoctorAppointments() {
 
                                                 <td>
                                                     {
-                                                        appointment.departmentName
-                                                    }
-                                                </td>
-
-                                                <td>
-                                                    {
-                                                        appointment.appointmentDate
-                                                    }
-                                                </td>
-
-                                                <td>
-                                                    {
                                                         appointment.appointmentTime
+                                                    }
+                                                </td>
+
+                                                <td>
+                                                    {
+                                                        appointment.reason
                                                     }
                                                 </td>
 
@@ -285,4 +277,4 @@ function DoctorAppointments() {
     );
 }
 
-export default DoctorAppointments;
+export default DoctorTodayAppointments;

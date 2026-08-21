@@ -8,25 +8,21 @@ import DoctorNavbar
     from "../../components/doctor/DoctorNavbar";
 
 import {
-    getDoctorAppointments
+    getDoctorAppointmentHistory
 } from "../../services/doctorAppointmentService";
 
 import "../../styles/doctorAppointments.css";
 
-function DoctorAppointments() {
+function DoctorAppointmentHistory() {
 
     const navigate = useNavigate();
 
     const [appointments, setAppointments] = useState([]);
-
     const [loading, setLoading] = useState(true);
-
     const [error, setError] = useState("");
-
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
-
-    const loadAppointments = async () => {
+    const loadHistory = async () => {
 
         try {
 
@@ -34,19 +30,19 @@ function DoctorAppointments() {
             setError("");
 
             const data =
-                await getDoctorAppointments();
+                await getDoctorAppointmentHistory();
 
             setAppointments(data || []);
 
         } catch (error) {
 
             console.error(
-                "Failed to load doctor appointments:",
+                "Failed to load appointment history:",
                 error
             );
 
             setError(
-                "Unable to load appointments."
+                "Unable to load appointment history."
             );
 
         } finally {
@@ -55,143 +51,85 @@ function DoctorAppointments() {
         }
     };
 
-
     useEffect(() => {
-
-        loadAppointments();
-
+        loadHistory();
     }, []);
 
-
-    const getStatusClass = (status) => {
-
-        return `doctor-appointment-status doctor-appointment-status-${String(
-            status
-        ).toLowerCase()}`;
-    };
-
-
     if (loading) {
-
         return (
             <div className="doctor-appointments-message">
-                Loading appointments...
+                Loading history...
             </div>
         );
     }
-
 
     if (error) {
-
         return (
             <div className="doctor-appointments-message">
-
                 <h2>{error}</h2>
-
-                <button
-                    onClick={loadAppointments}
-                >
+                <button onClick={loadHistory}>
                     Try Again
                 </button>
-
             </div>
         );
     }
-
 
     return (
         <div className="doctor-appointments-page">
 
             <DoctorSidebar
                 isOpen={sidebarOpen}
-                onClose={() =>
-                    setSidebarOpen(false)
-                }
+                onClose={() => setSidebarOpen(false)}
             />
-
 
             <main className="doctor-appointments-main">
 
                 <DoctorNavbar
-                    onMenuClick={() =>
-                        setSidebarOpen(true)
-                    }
+                    onMenuClick={() => setSidebarOpen(true)}
                 />
-
 
                 <div className="doctor-appointments-content">
 
                     <div className="doctor-appointments-header">
 
                         <div>
-
                             <h1>
-                                My Appointments
+                                Appointment History
                             </h1>
 
                             <p>
-                                Appointments assigned to you
+                                Completed appointments
                             </p>
-
                         </div>
 
                     </div>
-
 
                     <div className="doctor-appointments-table-container">
 
                         <table className="doctor-appointments-table">
 
                             <thead>
-
                                 <tr>
-
-                                    <th>
-                                        Appointment No.
-                                    </th>
-
-                                    <th>
-                                        Patient
-                                    </th>
-
-                                    <th>
-                                        Department
-                                    </th>
-
-                                    <th>
-                                        Date
-                                    </th>
-
-                                    <th>
-                                        Time
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                    <th>
-                                        Actions
-                                    </th>
-
+                                    <th>Appointment No.</th>
+                                    <th>Patient</th>
+                                    <th>Date</th>
+                                    <th>Reason</th>
+                                    <th>Remarks</th>
+                                    <th>Actions</th>
                                 </tr>
-
                             </thead>
-
 
                             <tbody>
 
                                 {appointments.length === 0 ? (
 
                                     <tr>
-
                                         <td
-                                            colSpan="7"
+                                            colSpan="6"
                                             className="doctor-appointments-empty"
                                         >
-                                            No appointments found.
+                                            No completed appointments.
                                         </td>
-
                                     </tr>
 
                                 ) : (
@@ -219,34 +157,21 @@ function DoctorAppointments() {
 
                                                 <td>
                                                     {
-                                                        appointment.departmentName
-                                                    }
-                                                </td>
-
-                                                <td>
-                                                    {
                                                         appointment.appointmentDate
                                                     }
                                                 </td>
 
                                                 <td>
                                                     {
-                                                        appointment.appointmentTime
+                                                        appointment.reason
                                                     }
                                                 </td>
 
                                                 <td>
-
-                                                    <span
-                                                        className={getStatusClass(
-                                                            appointment.status
-                                                        )}
-                                                    >
-                                                        {
-                                                            appointment.status
-                                                        }
-                                                    </span>
-
+                                                    {
+                                                        appointment.remarks ||
+                                                        "None"
+                                                    }
                                                 </td>
 
                                                 <td>
@@ -268,7 +193,6 @@ function DoctorAppointments() {
 
                                         )
                                     )
-
                                 )}
 
                             </tbody>
@@ -280,9 +204,8 @@ function DoctorAppointments() {
                 </div>
 
             </main>
-
         </div>
     );
 }
 
-export default DoctorAppointments;
+export default DoctorAppointmentHistory;
