@@ -58,10 +58,28 @@ function LandingPage() {
     window.history.replaceState(null, "", window.location.pathname);
   };
 
-  const heroImages = [
-    "/images/hospital-1.jpg",
-    "/images/hospital-2.jpg",
-    "/images/hospital-3.jpg",
+  const heroSlides = [
+    {
+      image: "/images/hospital-1.jpg",
+      welcome: "Welcome to our hospital",
+      heading: "Quality Healthcare, Compassionate Care",
+      paragraph:
+        "Providing trusted medical care with modern facilities and experienced professionals.",
+    },
+    {
+      image: "/images/hospital-2.jpg",
+      welcome: "",
+      heading: "Advanced Treatment with Modern Technology",
+      paragraph:
+        "Our hospital combines advanced medical technology with experienced specialists to provide reliable and effective treatment.",
+    },
+    {
+      image: "/images/hospital-3.jpg",
+      welcome: "",
+      heading: "Your Health, Our Priority",
+      paragraph:
+        "From consultation to recovery, we are committed to providing personalized care in a safe and comfortable environment.",
+    },
   ];
 
   const facilities = [
@@ -106,12 +124,12 @@ function LandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide(
-        (previousSlide) => (previousSlide + 1) % heroImages.length,
+        (previousSlide) => (previousSlide + 1) % heroSlides.length,
       );
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [heroSlides.length]);
 
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("landingScrollPosition");
@@ -151,9 +169,7 @@ function LandingPage() {
 
   return (
     <div className="landing-page">
-      {/* =========================
-                NAVBAR
-            ========================= */}
+      {/* NAVBAR */}
 
       <header className="landing-navbar">
         <div className="landing-logo">
@@ -183,12 +199,21 @@ function LandingPage() {
             Services
           </button>
 
-          <button
-            className="landing-login-button"
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
+          <div className="landing-auth-buttons">
+            <button
+              className="landing-register-button"
+              onClick={() => navigate("/register")}
+            >
+              Register
+            </button>
+
+            <button
+              className="landing-login-button"
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -203,24 +228,21 @@ function LandingPage() {
             transform: `translateX(-${currentSlide * 100}%)`,
           }}
         >
-          {heroImages.map((image, index) => (
+          {heroSlides.map((slide, index) => (
             <div className="landing-slide" key={index}>
-              <img src={image} alt={`Hospital slide ${index + 1}`} />
+              <img src={slide.image} alt={`Hospital slide ${index + 1}`} />
 
               <div className="landing-slide-overlay">
-                <div>
-                  <span>Welcome to our hospital</span>
+                <div className="landing-slide-content">
+                  {slide.welcome && (
+                    <span className="landing-slide-welcome">
+                      {slide.welcome}
+                    </span>
+                  )}
 
-                  <h1>
-                    Quality Healthcare,
-                    <br />
-                    Compassionate Care
-                  </h1>
+                  <h1>{slide.heading}</h1>
 
-                  <p>
-                    Providing trusted medical care with modern facilities and
-                    experienced professionals.
-                  </p>
+                  <p>{slide.paragraph}</p>
                 </div>
               </div>
             </div>
@@ -228,11 +250,12 @@ function LandingPage() {
         </div>
 
         <div className="landing-slider-dots">
-          {heroImages.map((_, index) => (
+          {heroSlides.map((_, index) => (
             <button
               key={index}
               className={index === currentSlide ? "active" : ""}
               onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
@@ -301,16 +324,15 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* =========================
-                FOOTER
-            ========================= */}
+      {/* FOOTER */}
 
-      <footer className="landing-footer">
-        <p>© {new Date().getFullYear()} Hospital Management System</p>
-
-        <p>
-          Designed and developed by <strong>Keshav Kumar</strong>
-        </p>
+      <footer className="footer">
+        <div className="footer-content">
+          Designed & Developed by
+          <span class="name"> Keshav Kumar</span>
+          <br></br>
+          Copyright © {new Date().getFullYear()} All Rights Reserved
+        </div>
       </footer>
     </div>
   );

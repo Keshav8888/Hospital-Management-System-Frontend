@@ -1,0 +1,385 @@
+/* =========================
+   PATIENT REGISTER PAGE
+========================= */
+
+.patient-register-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.patient-register-card {
+    width: 100%;
+
+    max-width: 1050px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.patient-register-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.register-logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 14px;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.patient-register-header h1 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.patient-register-header p {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.patient-register-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.register-field {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.register-field label {
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.register-field input,
+.register-field select,
+.register-field textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-field input,
+.register-field select {
+    height: 44px;
+}
+
+.register-field input:focus,
+.register-field select:focus,
+.register-field textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.register-field textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.register-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.register-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.register-cancel-button,
+.register-submit-button {
+    min-width: 130px;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.register-cancel-button {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+}
+
+.register-cancel-button:hover {
+    background: #f3f4f6;
+
+    border-color: #9ca3af;
+
+    transform: translateY(-1px);
+}
+
+.register-submit-button {
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.register-submit-button:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.register-submit-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.register-error,
+.register-success {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+.register-error {
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+}
+
+.register-success {
+    background: #dcfce7;
+
+    color: #166534;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.register-login-link {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eef0f2;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.register-login-link button {
+    margin-left: 5px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.register-login-link button:hover {
+    color: #1d4ed8;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .patient-register-page {
+        padding: 25px 15px;
+    }
+
+    .patient-register-card {
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+    .patient-register-form {
+        grid-template-columns: 1fr;
+    }
+
+    .register-full {
+        grid-column: auto;
+    }
+
+    .register-actions {
+        grid-column: auto;
+
+        flex-direction: column-reverse;
+    }
+
+    .register-cancel-button,
+    .register-submit-button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .patient-register-page {
+        padding: 15px 10px;
+    }
+
+    .patient-register-card {
+        padding: 22px 16px;
+    }
+
+    .patient-register-header h1 {
+        font-size: 25px;
+    }
+
+    .register-logo {
+        width: 46px;
+        height: 46px;
+    }
+}

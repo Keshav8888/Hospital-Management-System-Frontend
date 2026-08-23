@@ -44,6 +44,8 @@ import BookPatientAppointment from "./pages/patient/BookPatientAppointment";
 import PatientAppointmentDetails from "./pages/patient/PatientAppointmentDetails";
 import EditPatientProfile from "./pages/patient/EditPatientProfile";
 import LandingPage from "./pages/LandingPage";
+import PatientRegister from "./pages/PatientRegister";
+
 
 function App() {
   return (
@@ -56,6 +58,11 @@ function App() {
 
       <Route path="/login" 
         element={<Login />} 
+      />
+
+      <Route
+        path="/register"
+        element={<PatientRegister />}
       />
 
       <Route 
