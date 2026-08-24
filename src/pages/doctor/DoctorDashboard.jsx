@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import DoctorSidebar from "../../components/doctor/DoctorSidebar";
-
 import DoctorNavbar from "../../components/doctor/DoctorNavbar";
-
 import { getDoctorDashboard } from "../../services/doctorDashboardService";
-
 import "../../styles/doctorDashboard.css";
+import {
+  getDashboardGreeting,
+  getLoggedInFirstName,
+} from "../../utils/dashboardGreeting";
 
 function DoctorDashboard() {
   const navigate = useNavigate();
@@ -68,7 +68,9 @@ function DoctorDashboard() {
         <div className="doctor-dashboard-content">
           <div className="doctor-dashboard-header">
             <div>
-              <h1>Doctor Dashboard</h1>
+              <h1>
+                {getDashboardGreeting()}, {getLoggedInFirstName()}{" "}
+              </h1>
 
               <p>Overview of your appointments</p>
             </div>

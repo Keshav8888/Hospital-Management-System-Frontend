@@ -1,28 +1,33 @@
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../../services/authService";
 import "../../styles/adminNavbar.css";
 
 function AdminNavbar({ onMenuClick }) {
+  
+  const navigate = useNavigate();
 
-    return (
-        <header className="admin-navbar">
+  const handleLogout = () => {
+    logoutUser();
 
-            <button
-                className="mobile-menu-button"
-                onClick={onMenuClick}
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
+    navigate("/login");
+  };
+  return (
+    <header className="admin-navbar">
+      <button
+        className="mobile-menu-button"
+        onClick={onMenuClick}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
-            <div className="navbar-title">
-                Hospital Management System
-            </div>
+      <div className="navbar-title">Hospital Management System</div>
 
-            <div className="navbar-user">
-                Admin
-            </div>
-
-        </header>
-    );
+      <button className="logout-button" onClick={handleLogout}>
+        Log Out
+      </button>
+    </header>
+  );
 }
 
 export default AdminNavbar;

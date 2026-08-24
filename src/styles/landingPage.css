@@ -304,8 +304,9 @@ body {
 
 .landing-slide-content {
   width: 100%;
+  max-width: 900px;
 
-  max-width: 650px;
+  padding-top: 110px;
 
   text-align: left;
 }
@@ -323,7 +324,7 @@ body {
 
   color: #facc15;
 
-  font-size: 30px;
+  font-size: 36px;
 
   line-height: 1.2;
 
@@ -364,15 +365,6 @@ body {
 
 .landing-slide-overlay div {
   max-width: 650px;
-}
-
-.landing-slide-overlay span {
-  font-size: 14px;
-  font-weight: 600;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
 }
 
 .landing-slide-overlay h1 {
@@ -527,12 +519,6 @@ body {
 }
 
 /* HOVER = COMPLETE IMAGE */
-
-.landing-about-image:hover img {
-  /* object-fit: contain;
-
-  transform: scale(0.98); */
-}
 
 /* =========================
    OUR SERVICES
@@ -689,16 +675,20 @@ body {
     padding-right: 6%;
   }
 
+  landing-slide-content {
+    padding-top: 85px;
+  }
+
+  .landing-slide-welcome {
+    font-size: 28px;
+  }
+
   .landing-slide-content h1 {
     font-size: 38px;
   }
 
   .landing-slide-content p {
     font-size: 15px;
-  }
-
-  .landing-slide-welcome {
-    font-size: 13px;
   }
 
   .landing-slide-overlay h1 {
@@ -750,16 +740,22 @@ body {
     padding-right: 25px;
   }
 
+  .landing-slide-content {
+    padding-top: 65px;
+  }
+
+  .landing-slide-welcome {
+    top: 32%;
+    font-size: 19px;
+    letter-spacing: 1px;
+  }
+
   .landing-slide-content h1 {
     font-size: 31px;
   }
 
   .landing-slide-content p {
     font-size: 14px;
-  }
-
-  .landing-slide-welcome {
-    font-size: 12px;
   }
 
   .landing-navbar {

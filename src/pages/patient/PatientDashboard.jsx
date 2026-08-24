@@ -1,403 +1,212 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import PatientSidebar from "../../components/patient/PatientSidebar";
-
 import PatientNavbar from "../../components/patient/PatientNavbar";
-
 import { getMyPatientAppointments } from "../../services/patientAppointmentService";
-
 import "../../styles/patientDashboard.css";
+import {
+  getDashboardGreeting,
+  getLoggedInFirstName,
+} from "../../utils/dashboardGreeting";
 
 function PatientDashboard() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const [appointments, setAppointments] = useState([]);
 
-    const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-    const [error, setError] = useState("");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+  useEffect(() => {
+    const loadAppointments = async () => {
+      try {
+        setLoading(true);
+        setError("");
 
+        const data = await getMyPatientAppointments();
 
-    useEffect(() => {
+        setAppointments(data || []);
+      } catch (error) {
+        console.error("Failed to load patient appointments:", error);
 
-        const loadAppointments = async () => {
+        setError("Unable to load dashboard data.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-            try {
+    loadAppointments();
+  }, []);
 
-                setLoading(true);
-                setError("");
+  const bookedCount = appointments.filter(
+    (appointment) => appointment.status === "BOOKED",
+  ).length;
 
-                const data =
-                    await getMyPatientAppointments();
+  const confirmedCount = appointments.filter(
+    (appointment) => appointment.status === "CONFIRMED",
+  ).length;
 
-                setAppointments(data || []);
+  const completedCount = appointments.filter(
+    (appointment) => appointment.status === "COMPLETED",
+  ).length;
 
-            } catch (error) {
+  const upcomingAppointments = appointments.filter(
+    (appointment) =>
+      appointment.status === "BOOKED" || appointment.status === "CONFIRMED",
+  );
 
-                console.error(
-                    "Failed to load patient appointments:",
-                    error
-                );
+  return (
+    <div className="patient-dashboard-page">
+      <PatientSidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
 
-                setError(
-                    "Unable to load dashboard data."
-                );
+      <main className="patient-dashboard-main">
+        <PatientNavbar onMenuClick={() => setSidebarOpen(true)} />
 
-            } finally {
+        <div className="patient-dashboard-content">
+          <div className="patient-dashboard-header">
+            <div>
+              <h1>
+                {getDashboardGreeting()}, {getLoggedInFirstName()}{" "}
+              </h1>
 
-                setLoading(false);
-            }
-        };
+              <p>Manage your appointments and profile</p>
+            </div>
+          </div>
 
-        loadAppointments();
+          {error && <div className="patient-dashboard-error">{error}</div>}
 
-    }, []);
+          <div className="patient-stats-grid">
+            <div className="patient-stat-card">
+              <span>Total Appointments</span>
 
+              <strong>{loading ? "..." : appointments.length}</strong>
+            </div>
 
-    const bookedCount =
-        appointments.filter(
-            (appointment) =>
-                appointment.status === "BOOKED"
-        ).length;
+            <div className="patient-stat-card">
+              <span>Booked</span>
 
-    const confirmedCount =
-        appointments.filter(
-            (appointment) =>
-                appointment.status === "CONFIRMED"
-        ).length;
+              <strong>{loading ? "..." : bookedCount}</strong>
+            </div>
 
-    const completedCount =
-        appointments.filter(
-            (appointment) =>
-                appointment.status === "COMPLETED"
-        ).length;
+            <div className="patient-stat-card">
+              <span>Confirmed</span>
 
-    const upcomingAppointments =
-        appointments.filter(
-            (appointment) =>
-                appointment.status === "BOOKED" ||
-                appointment.status === "CONFIRMED"
-        );
+              <strong>{loading ? "..." : confirmedCount}</strong>
+            </div>
 
+            <div className="patient-stat-card">
+              <span>Completed</span>
 
-    return (
+              <strong>{loading ? "..." : completedCount}</strong>
+            </div>
+          </div>
 
-        <div className="patient-dashboard-page">
+          <div className="patient-dashboard-section">
+            <div className="patient-section-header">
+              <div>
+                <h2>Quick Actions</h2>
 
-            <PatientSidebar
-                isOpen={sidebarOpen}
-                onClose={() =>
-                    setSidebarOpen(false)
-                }
-            />
+                <p>Manage your hospital activities</p>
+              </div>
+            </div>
 
-            <main className="patient-dashboard-main">
+            <div className="patient-quick-actions">
+              <button
+                className="patient-action-card"
+                onClick={() => navigate("/patient/appointments/book")}
+              >
+                <span className="patient-action-icon">+</span>
 
-                <PatientNavbar
-                    onMenuClick={() =>
-                        setSidebarOpen(true)
-                    }
-                />
+                <span className="patient-action-title">Book Appointment</span>
 
-                <div className="patient-dashboard-content">
+                <span className="patient-action-description">
+                  Schedule a new appointment
+                </span>
+              </button>
 
-                    <div className="patient-dashboard-header">
+              <button
+                className="patient-action-card"
+                onClick={() => navigate("/patient/appointments")}
+              >
+                <span className="patient-action-icon">📅</span>
 
-                        <div>
+                <span className="patient-action-title">My Appointments</span>
 
-                            <h1>
-                                Patient Dashboard
-                            </h1>
+                <span className="patient-action-description">
+                  View and manage your appointments
+                </span>
+              </button>
 
-                            <p>
-                                Manage your appointments and profile
-                            </p>
+              <button
+                className="patient-action-card"
+                onClick={() => navigate("/patient/profile")}
+              >
+                <span className="patient-action-icon">👤</span>
 
-                        </div>
+                <span className="patient-action-title">My Profile</span>
 
+                <span className="patient-action-description">
+                  View and update your information
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div className="patient-dashboard-section">
+            <div className="patient-section-header">
+              <div>
+                <h2>Upcoming Appointments</h2>
+
+                <p>Your booked and confirmed appointments</p>
+              </div>
+            </div>
+
+            {loading ? (
+              <div className="patient-dashboard-empty">
+                Loading appointments...
+              </div>
+            ) : upcomingAppointments.length === 0 ? (
+              <div className="patient-dashboard-empty">
+                No upcoming appointments.
+              </div>
+            ) : (
+              <div className="patient-upcoming-list">
+                {upcomingAppointments.slice(0, 5).map((appointment) => (
+                  <div className="patient-upcoming-card" key={appointment.id}>
+                    <div>
+                      <strong>{appointment.doctorName}</strong>
+
+                      <span>{appointment.departmentName}</span>
                     </div>
 
+                    <div>
+                      <strong>{appointment.appointmentDate}</strong>
 
-                    {error && (
-                        <div className="patient-dashboard-error">
-                            {error}
-                        </div>
-                    )}
-
-
-                    <div className="patient-stats-grid">
-
-                        <div className="patient-stat-card">
-
-                            <span>
-                                Total Appointments
-                            </span>
-
-                            <strong>
-                                {loading
-                                    ? "..."
-                                    : appointments.length}
-                            </strong>
-
-                        </div>
-
-
-                        <div className="patient-stat-card">
-
-                            <span>
-                                Booked
-                            </span>
-
-                            <strong>
-                                {loading
-                                    ? "..."
-                                    : bookedCount}
-                            </strong>
-
-                        </div>
-
-
-                        <div className="patient-stat-card">
-
-                            <span>
-                                Confirmed
-                            </span>
-
-                            <strong>
-                                {loading
-                                    ? "..."
-                                    : confirmedCount}
-                            </strong>
-
-                        </div>
-
-
-                        <div className="patient-stat-card">
-
-                            <span>
-                                Completed
-                            </span>
-
-                            <strong>
-                                {loading
-                                    ? "..."
-                                    : completedCount}
-                            </strong>
-
-                        </div>
-
+                      <span>{appointment.appointmentTime}</span>
                     </div>
 
-
-                    <div className="patient-dashboard-section">
-
-                        <div className="patient-section-header">
-
-                            <div>
-
-                                <h2>
-                                    Quick Actions
-                                </h2>
-
-                                <p>
-                                    Manage your hospital activities
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div className="patient-quick-actions">
-
-                            <button
-                                className="patient-action-card"
-                                onClick={() =>
-                                    navigate(
-                                        "/patient/appointments/book"
-                                    )
-                                }
-                            >
-
-                                <span className="patient-action-icon">
-                                    +
-                                </span>
-
-                                <span className="patient-action-title">
-                                    Book Appointment
-                                </span>
-
-                                <span className="patient-action-description">
-                                    Schedule a new appointment
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                className="patient-action-card"
-                                onClick={() =>
-                                    navigate(
-                                        "/patient/appointments"
-                                    )
-                                }
-                            >
-
-                                <span className="patient-action-icon">
-                                    📅
-                                </span>
-
-                                <span className="patient-action-title">
-                                    My Appointments
-                                </span>
-
-                                <span className="patient-action-description">
-                                    View and manage your appointments
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                className="patient-action-card"
-                                onClick={() =>
-                                    navigate(
-                                        "/patient/profile"
-                                    )
-                                }
-                            >
-
-                                <span className="patient-action-icon">
-                                    👤
-                                </span>
-
-                                <span className="patient-action-title">
-                                    My Profile
-                                </span>
-
-                                <span className="patient-action-description">
-                                    View and update your information
-                                </span>
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div className="patient-dashboard-section">
-
-                        <div className="patient-section-header">
-
-                            <div>
-
-                                <h2>
-                                    Upcoming Appointments
-                                </h2>
-
-                                <p>
-                                    Your booked and confirmed appointments
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        {loading ? (
-
-                            <div className="patient-dashboard-empty">
-                                Loading appointments...
-                            </div>
-
-                        ) : upcomingAppointments.length === 0 ? (
-
-                            <div className="patient-dashboard-empty">
-                                No upcoming appointments.
-                            </div>
-
-                        ) : (
-
-                            <div className="patient-upcoming-list">
-
-                                {upcomingAppointments
-                                    .slice(0, 5)
-                                    .map(
-                                        (appointment) => (
-
-                                            <div
-                                                className="patient-upcoming-card"
-                                                key={
-                                                    appointment.id
-                                                }
-                                            >
-
-                                                <div>
-
-                                                    <strong>
-                                                        {
-                                                            appointment.doctorName
-                                                        }
-                                                    </strong>
-
-                                                    <span>
-                                                        {
-                                                            appointment.departmentName
-                                                        }
-                                                    </span>
-
-                                                </div>
-
-
-                                                <div>
-
-                                                    <strong>
-                                                        {
-                                                            appointment.appointmentDate
-                                                        }
-                                                    </strong>
-
-                                                    <span>
-                                                        {
-                                                            appointment.appointmentTime
-                                                        }
-                                                    </span>
-
-                                                </div>
-
-
-                                                <button
-                                                    onClick={() =>
-                                                        navigate(
-                                                            `/patient/appointments/${appointment.id}`
-                                                        )
-                                                    }
-                                                >
-                                                    View
-                                                </button>
-
-                                            </div>
-
-                                        )
-                                    )}
-
-                            </div>
-
-                        )}
-
-                    </div>
-
-                </div>
-
-            </main>
-
+                    <button
+                      onClick={() =>
+                        navigate(`/patient/appointments/${appointment.id}`)
+                      }
+                    >
+                      View
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-    );
+      </main>
+    </div>
+  );
 }
 
 export default PatientDashboard;

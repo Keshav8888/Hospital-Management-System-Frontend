@@ -1,127 +1,139 @@
 .admin-navbar {
+  width: 100%;
 
-    width: 100%;
+  height: 72px;
 
-    height: 72px;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: space-between;
 
-    justify-content: space-between;
+  padding: 0 30px;
 
-    padding: 0 30px;
+  background-color: #ffffff;
 
-    background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 
-    border-bottom: 1px solid #e5e7eb;
-
-    box-shadow:
-        0 1px 4px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
 }
-
 
 .navbar-title {
+  color: #1f2937;
 
-    color: #1f2937;
+  font-size: 19px;
 
-    font-size: 19px;
-
-    font-weight: 600;
+  font-weight: 600;
 }
 
+.logout-button {
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: red;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #b61d1d;
+
+  transform: translateY(-1px);
+}
 
 .navbar-user {
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: center;
 
-    justify-content: center;
+  min-width: 70px;
 
-    min-width: 70px;
+  height: 36px;
 
-    height: 36px;
+  padding: 0 14px;
 
-    padding: 0 14px;
+  border-radius: 18px;
 
-    border-radius: 18px;
+  background-color: #eff6ff;
 
-    background-color: #eff6ff;
+  color: #1d4ed8;
 
-    color: #1d4ed8;
+  font-size: 14px;
 
-    font-size: 14px;
-
-    font-weight: 600;
+  font-weight: 600;
 }
-
 
 /* =================================
    MOBILE MENU BUTTON
 ================================= */
 
 .mobile-menu-button {
+  display: none;
 
-    display: none;
+  border: none;
 
-    border: none;
+  background: transparent;
 
-    background: transparent;
+  color: #1f2937;
 
-    color: #1f2937;
+  font-size: 24px;
 
-    font-size: 24px;
+  padding: 4px 8px;
 
-    padding: 4px 8px;
-
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 /* =================================
    MOBILE
 ================================= */
 
 @media (max-width: 768px) {
+  .admin-navbar {
+    height: 64px;
 
-    .admin-navbar {
+    padding: 0 16px;
 
-        height: 64px;
+    gap: 10px;
+  }
 
-        padding: 0 16px;
+  .mobile-menu-button {
+    display: block;
 
-        gap: 10px;
-    }
+    flex-shrink: 0;
+  }
 
-    .mobile-menu-button {
+  .navbar-title {
+    flex: 1;
 
-        display: block;
+    font-size: 15px;
 
-        flex-shrink: 0;
-    }
+    white-space: nowrap;
 
-    .navbar-title {
+    overflow: hidden;
 
-        flex: 1;
+    text-overflow: ellipsis;
+  }
 
-        font-size: 15px;
+  .navbar-user {
+    min-width: auto;
 
-        white-space: nowrap;
+    height: 32px;
 
-        overflow: hidden;
+    padding: 0 10px;
 
-        text-overflow: ellipsis;
-    }
-
-    .navbar-user {
-
-        min-width: auto;
-
-        height: 32px;
-
-        padding: 0 10px;
-
-        font-size: 12px;
-    }
+    font-size: 12px;
+  }
 }

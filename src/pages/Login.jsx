@@ -27,6 +27,7 @@ function Login() {
     localStorage.removeItem("token");
     localStorage.removeItem("email");
     localStorage.removeItem("role");
+    localStorage.removeItem("firstName");
 
     try {
       const loginData = {
@@ -37,6 +38,8 @@ function Login() {
       const response = await loginUser(loginData);
 
       console.log("Login successful:", response);
+      
+      localStorage.setItem("firstName", response.firstName || "");
 
       if (response.role === "ADMIN") {
         setSuccess("Login successful.");

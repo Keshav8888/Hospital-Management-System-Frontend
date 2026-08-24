@@ -1,28 +1,34 @@
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../../services/authService";
 import "../../styles/receptionistNavbar.css";
 
 function ReceptionistNavbar({ onMenuClick }) {
+  const navigate = useNavigate();
 
-    return (
-        <header className="receptionist-navbar">
+  const handleLogout = () => {
+    logoutUser();
 
-            <button
-                className="receptionist-mobile-menu-button"
-                onClick={onMenuClick}
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
+    navigate("/login");
+  };
+  return (
+    <header className="receptionist-navbar">
+      <button
+        className="receptionist-mobile-menu-button"
+        onClick={onMenuClick}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
-            <div className="receptionist-navbar-title">
-                Hospital Management System
-            </div>
+      <div className="receptionist-navbar-title">
+        Hospital Management System
+      </div>
 
-            <div className="receptionist-navbar-user">
-                Receptionist
-            </div>
-
-        </header>
-    );
+      <button className="logout-button" onClick={handleLogout}>
+        Log Out
+      </button>
+    </header>
+  );
 }
 
 export default ReceptionistNavbar;

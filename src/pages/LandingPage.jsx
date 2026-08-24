@@ -68,14 +68,14 @@ function LandingPage() {
     },
     {
       image: "/images/hospital-2.jpg",
-      welcome: "",
+      // welcome: "",
       heading: "Advanced Treatment with Modern Technology",
       paragraph:
         "Our hospital combines advanced medical technology with experienced specialists to provide reliable and effective treatment.",
     },
     {
       image: "/images/hospital-3.jpg",
-      welcome: "",
+      // welcome: "",
       heading: "Your Health, Our Priority",
       paragraph:
         "From consultation to recovery, we are committed to providing personalized care in a safe and comfortable environment.",
@@ -261,9 +261,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* =========================
-                ABOUT
-            ========================= */}
+{/* ABOUT */}
 
       <section className="landing-about" id="about-us">
         <div className="landing-about-heading">
@@ -296,9 +294,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* =========================
-                FACILITIES
-            ========================= */}
+{/* FACILITIES */}
 
       <section className="landing-facilities" id="services">
         <div className="landing-section-heading">
@@ -329,7 +325,7 @@ function LandingPage() {
       <footer className="footer">
         <div className="footer-content">
           Designed & Developed by
-          <span class="name"> Keshav Kumar</span>
+          <span className="name"> Keshav Kumar</span>
           <br></br>
           Copyright © {new Date().getFullYear()} All Rights Reserved
         </div>

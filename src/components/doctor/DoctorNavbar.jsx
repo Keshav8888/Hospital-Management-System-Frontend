@@ -1,30 +1,32 @@
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../../services/authService";
 import "../../styles/doctorNavbar.css";
 
 function DoctorNavbar({ onMenuClick }) {
+  const navigate = useNavigate();
 
-    return (
-        <header className="doctor-navbar">
+  const handleLogout = () => {
+    logoutUser();
 
-            <button
-                className="doctor-mobile-menu-button"
-                onClick={onMenuClick}
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
+    navigate("/login");
+  };
+  return (
+    <header className="doctor-navbar">
+      <button
+        className="doctor-mobile-menu-button"
+        onClick={onMenuClick}
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
+      <div className="doctor-navbar-title">Hospital Management System</div>
 
-            <div className="doctor-navbar-title">
-                Hospital Management System
-            </div>
-
-
-            <div className="doctor-navbar-user">
-                Doctor
-            </div>
-
-        </header>
-    );
+      <button className="logout-button" onClick={handleLogout}>
+        Log Out
+      </button>
+    </header>
+  );
 }
 
 export default DoctorNavbar;
