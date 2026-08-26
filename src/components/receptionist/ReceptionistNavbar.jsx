@@ -8,7 +8,7 @@ function ReceptionistNavbar({ onMenuClick }) {
   const handleLogout = () => {
     logoutUser();
 
-    navigate("/login");
+    navigate("/");
   };
   return (
     <header className="receptionist-navbar">

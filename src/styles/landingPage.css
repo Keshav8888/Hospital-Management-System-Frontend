@@ -242,9 +242,7 @@ body {
   font-size: 11px;
 }
 
-/* =========================
-   HERO SLIDER
-========================= */
+/* HERO SLIDER */
 
 .landing-hero {
   position: relative;
@@ -418,9 +416,7 @@ body {
   background: #ffffff;
 }
 
-/* =========================
-   ABOUT US
-========================= */
+/* ABOUT US */
 
 .landing-about {
   max-width: 1180px;
@@ -487,8 +483,6 @@ body {
 .landing-about-image {
   height: 430px;
 
-  /* overflow: hidden; */
-
   display: flex;
 
   align-items: center;
@@ -496,10 +490,6 @@ body {
   justify-content: center;
 
   border-radius: 16px;
-
-  /* background: #ffffff; */
-
-  /* box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12); */
 }
 
 .landing-about-image img {
@@ -509,20 +499,10 @@ body {
 
   display: block;
 
-  /* object-fit: cover; */
-
   object-position: center;
-
-  /* transition:
-    object-fit 0.3s ease,
-    transform 0.4s ease; */
 }
 
-/* HOVER = COMPLETE IMAGE */
-
-/* =========================
-   OUR SERVICES
-========================= */
+/* OUR SERVICES */
 
 .landing-facilities {
   padding: 80px 30px 100px;

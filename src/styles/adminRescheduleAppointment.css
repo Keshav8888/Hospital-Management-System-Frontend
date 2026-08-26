@@ -1,304 +1,279 @@
 .admin-reschedule-page {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    background-color: #f5f7fb;
+  background-color: #f5f7fb;
 
-    padding: 40px 30px;
+  padding: 40px 30px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .admin-reschedule-container {
-    max-width: 900px;
+  max-width: 900px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    padding: 30px;
+  padding: 30px;
 
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .admin-reschedule-header {
-    display: flex;
+  display: flex;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    align-items: center;
+  align-items: center;
 
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .admin-reschedule-header h1 {
-    margin: 0;
+  margin: 0;
 
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 30px;
+  font-size: 30px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .admin-reschedule-header p {
-    margin: 6px 0 0;
+  margin: 6px 0 0;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
-
-/* ===============================
-   SUMMARY
-================================ */
+/* SUMMARY */
 
 .appointment-summary {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-    gap: 15px;
+  gap: 15px;
 
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .appointment-summary > div {
-    padding: 15px;
+  padding: 15px;
 
-    background-color: #f8fafc;
+  background-color: #f8fafc;
 
-    border: 1px solid #eef0f2;
+  border: 1px solid #eef0f2;
 
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .appointment-summary span {
-    display: block;
+  display: block;
 
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .appointment-summary strong {
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
-
-/* ===============================
-   FORM
-================================ */
+/* FORM */
 
 .admin-reschedule-form {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+  gap: 20px;
 }
 
 .appointment-form-group {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .appointment-form-group label {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 
-    color: #374151;
+  color: #374151;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .appointment-form-group input {
-    width: 100%;
+  width: 100%;
 
-    padding: 11px 12px;
+  padding: 11px 12px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    outline: none;
+  outline: none;
 }
 
 .appointment-form-group input:focus {
-    border-color: #2563eb;
+  border-color: #2563eb;
 
-    box-shadow:
-        0 0 0 2px
-        rgba(37, 99, 235, 0.08);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
 }
 
-
-/* ===============================
-   ACTIONS
-================================ */
+/* ACTIONS */
 
 .admin-reschedule-actions {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 
-    display: flex;
+  display: flex;
 
-    justify-content: flex-end;
+  justify-content: flex-end;
 
-    gap: 12px;
+  gap: 12px;
 
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .appointment-cancel-button,
 .appointment-update-button {
-    padding: 11px 20px;
+  padding: 11px 20px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .appointment-cancel-button {
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    color: #374151;
+  color: #374151;
 }
 
 .appointment-cancel-button:hover {
-    background-color: #f3f4f6;
+  background-color: #f3f4f6;
 
-    border-color: #9ca3af;
+  border-color: #9ca3af;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .appointment-update-button {
-    border: none;
+  border: none;
 
-    background-color: #2563eb;
+  background-color: #2563eb;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    box-shadow:
-        0 6px 14px
-        rgba(37, 99, 235, 0.20);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.2);
 }
 
 .appointment-update-button:hover:not(:disabled) {
-    background-color: #1d4ed8;
+  background-color: #1d4ed8;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 
-    box-shadow:
-        0 8px 18px
-        rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
 }
 
 .appointment-update-button:disabled {
-    opacity: 0.6;
+  opacity: 0.6;
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
-
-/* ===============================
-   MESSAGES
-================================ */
+/* MESSAGES */
 
 .appointment-form-error,
 .appointment-form-success {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    padding: 12px 15px;
+  padding: 12px 15px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 }
 
 .appointment-form-error {
-    background-color: #fee2e2;
+  background-color: #fee2e2;
 
-    color: #b91c1c;
+  color: #b91c1c;
 }
 
 .appointment-form-success {
-    background-color: #dcfce7;
+  background-color: #dcfce7;
 
-    color: #166534;
+  color: #166534;
 }
 
 .admin-reschedule-message {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
 
-    color: #6b7280;
+  color: #6b7280;
 }
 
-
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
+  .admin-reschedule-page {
+    padding: 20px 15px;
+  }
 
-    .admin-reschedule-page {
-        padding: 20px 15px;
-    }
+  .admin-reschedule-container {
+    padding: 20px;
+  }
 
-    .admin-reschedule-container {
-        padding: 20px;
-    }
+  .admin-reschedule-header {
+    flex-direction: column;
 
-    .admin-reschedule-header {
-        flex-direction: column;
+    align-items: flex-start;
 
-        align-items: flex-start;
+    gap: 15px;
+  }
 
-        gap: 15px;
-    }
+  .appointment-summary {
+    grid-template-columns: 1fr;
+  }
 
-    .appointment-summary {
-        grid-template-columns: 1fr;
-    }
+  .admin-reschedule-form {
+    grid-template-columns: 1fr;
+  }
 
-    .admin-reschedule-form {
-        grid-template-columns: 1fr;
-    }
+  .admin-reschedule-actions {
+    grid-column: auto;
 
-    .admin-reschedule-actions {
-        grid-column: auto;
-
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }

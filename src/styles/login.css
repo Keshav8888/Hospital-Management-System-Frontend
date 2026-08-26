@@ -1,15 +1,11 @@
-/* =========================
-   LOGIN PAGE
-========================= */
+/* LOGIN PAGE */
 
 .login-page {
   min-height: 100vh;
   margin: 0;
 }
 
-/* =========================
-   BACKGROUND
-========================= */
+/* BACKGROUND */
 
 .login-background {
   position: relative;
@@ -44,9 +40,7 @@
   background: rgba(15, 23, 42, 0.42);
 }
 
-/* =========================
-   LOGIN CARD
-========================= */
+/* LOGIN CARD */
 
 .login-card {
   position: relative;
@@ -72,9 +66,7 @@
   backdrop-filter: blur(5px);
 }
 
-/* =========================
-   HEADING
-========================= */
+/* HEADING */
 
 .login-heading {
   text-align: center;
@@ -94,9 +86,7 @@
   font-weight: 500;
 }
 
-/* =========================
-   ERROR
-========================= */
+/* ERROR */
 
 .login-error {
   margin-bottom: 20px;
@@ -130,9 +120,7 @@
   font-size: 14px;
 }
 
-/* =========================
-   FORM
-========================= */
+/* FORM */
 
 .login-form {
   display: flex;
@@ -199,9 +187,7 @@
   background: #ffffff;
 }
 
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
 .password-input-container {
   position: relative;
@@ -261,9 +247,7 @@
   color: #2563eb;
 }
 
-/* =========================
-   SIGN IN BUTTON
-========================= */
+/* SIGN IN BUTTON */
 
 .login-button {
   width: 100%;
@@ -288,8 +272,6 @@
 
   cursor: pointer;
 
-  /* box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22); */
-
   transition:
     background-color 0.2s ease,
     transform 0.2s ease,
@@ -300,8 +282,6 @@
   background: #1d4ed8;
 
   transform: translateY(-1px);
-
-  /* box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28); */
 }
 
 .login-button:disabled {
@@ -310,9 +290,7 @@
   cursor: not-allowed;
 }
 
-/* =========================
-   REGISTER
-========================= */
+/* REGISTER */
 
 .login-register-text {
   display: flex;
@@ -356,9 +334,7 @@
   text-decoration: underline;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 600px) {
   .login-background {

@@ -1,221 +1,218 @@
 .receptionist-appointments-page {
-    min-height: 100vh;
-    background-color: #f5f7fb;
+  min-height: 100vh;
+  background-color: #f5f7fb;
 }
 
 .receptionist-appointments-main {
-    width: calc(100% - 240px);
-    min-height: 100vh;
-    margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  margin-left: 240px;
 }
 
 .receptionist-appointments-content {
-    padding: 32px;
+  padding: 32px;
 }
 
 .receptionist-appointments-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .receptionist-appointments-header h1 {
-    margin: 0;
-    color: #111827;
-    font-size: 30px;
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
 }
 
 .receptionist-appointments-header p {
-    margin: 6px 0 0;
-    color: #6b7280;
+  margin: 6px 0 0;
+  color: #6b7280;
 }
 
 .book-appointment-button {
-    padding: 11px 18px;
-    border: none;
-    border-radius: 7px;
-    background: #2563eb;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .book-appointment-button:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
+  background: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 .receptionist-appointments-toolbar {
-    margin-bottom: 20px;
-    padding: 18px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow:
-        0 2px 8px rgba(15, 23, 42, 0.05);
+  margin-bottom: 20px;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 
 .receptionist-appointment-search-form {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .receptionist-appointment-search-input {
-    width: 420px;
-    padding: 11px 13px;
-    border: 1px solid #d1d5db;
-    border-radius: 7px;
-    outline: none;
+  width: 420px;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
 }
 
 .receptionist-appointment-search-input:focus {
-    border-color: #2563eb;
+  border-color: #2563eb;
 }
 
 .receptionist-appointment-search-button {
-    padding: 11px 18px;
-    border: none;
-    border-radius: 7px;
-    background: #2563eb;
-    color: #ffffff;
-    font-weight: 600;
-    cursor: pointer;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .receptionist-appointments-table-container {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow-x: auto;
-    box-shadow:
-        0 2px 8px rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 
 .receptionist-appointments-table {
-    width: 100%;
-    min-width: 1200px;
-    border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
 }
 
 .receptionist-appointments-table th {
-    padding: 15px;
-    background: #f8fafc;
-    color: #374151;
-    text-align: left;
-    font-size: 13px;
-    border-bottom: 1px solid #e5e7eb;
+  padding: 15px;
+  background: #f8fafc;
+  color: #374151;
+  text-align: left;
+  font-size: 13px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .receptionist-appointments-table td {
-    padding: 15px;
-    color: #4b5563;
-    font-size: 14px;
-    border-bottom: 1px solid #eef0f2;
+  padding: 15px;
+  color: #4b5563;
+  font-size: 14px;
+  border-bottom: 1px solid #eef0f2;
 }
 
 .receptionist-appointments-table tbody tr:hover {
-    background: #f8fafc;
+  background: #f8fafc;
 }
 
 .receptionist-appointment-actions {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .receptionist-appointment-actions button {
-    padding: 7px 11px;
-    border: none;
-    border-radius: 6px;
-    font-size: 12px;
-    cursor: pointer;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .receptionist-appointment-actions button:disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .receptionist-appointment-status {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .receptionist-appointment-status-booked {
-    background: #dbeafe;
-    color: #1d4ed8;
+  background: #dbeafe;
+  color: #1d4ed8;
 }
 
 .receptionist-appointment-status-confirmed {
-    background: #dcfce7;
-    color: #166534;
+  background: #dcfce7;
+  color: #166534;
 }
 
 .receptionist-appointment-status-completed {
-    background: #e0e7ff;
-    color: #3730a3;
+  background: #e0e7ff;
+  color: #3730a3;
 }
 
 .receptionist-appointment-status-cancelled {
-    background: #fee2e2;
-    color: #b91c1c;
+  background: #fee2e2;
+  color: #b91c1c;
 }
 
 .receptionist-appointments-empty {
-    padding: 40px;
-    text-align: center;
+  padding: 40px;
+  text-align: center;
 }
 
 .receptionist-appointments-pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px;
-    border-top: 1px solid #eef0f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-top: 1px solid #eef0f2;
 }
 
 .receptionist-appointments-message {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    color: #6b7280;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
+  .receptionist-appointments-main {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    .receptionist-appointments-main {
-        width: 100%;
-        margin-left: 0;
-    }
+  .receptionist-appointments-content {
+    padding: 20px 16px;
+  }
 
-    .receptionist-appointments-content {
-        padding: 20px 16px;
-    }
+  .receptionist-appointments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 
-    .receptionist-appointments-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+  .receptionist-appointment-search-form {
+    flex-direction: column;
+  }
 
-    .receptionist-appointment-search-form {
-        flex-direction: column;
-    }
+  .receptionist-appointment-search-input {
+    width: 100%;
+  }
 
-    .receptionist-appointment-search-input {
-        width: 100%;
-    }
-
-    .receptionist-appointments-pagination {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+  .receptionist-appointments-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 }

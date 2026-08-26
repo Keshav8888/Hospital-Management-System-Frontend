@@ -1,204 +1,166 @@
-/* =================================
-   ADMIN DASHBOARD
-================================= */
+/* ADMIN DASHBOARD */
 
 .admin-layout {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f5f7fb;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f7fb;
 }
 
-
-/* =================================
-   MAIN AREA
-================================= */
+/* MAIN AREA */
 
 .admin-main {
-    width: calc(100% - 240px);
-    min-height: 100vh;
-    margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  margin-left: 240px;
 }
 
-
-/* =================================
-   CONTENT
-================================= */
+/* CONTENT */
 
 .admin-content {
-    width: 100%;
-    padding: 32px;
+  width: 100%;
+  padding: 32px;
 }
-
 
 .admin-content h1 {
-    margin: 0;
+  margin: 0;
 
-    color: #111827;
+  color: #111827;
 
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
 }
-
 
 .dashboard-subtitle {
-    margin: 8px 0 28px;
+  margin: 8px 0 28px;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 15px;
+  font-size: 15px;
 }
 
-
-/* =================================
-   STATISTICS GRID
-================================= */
+/* STATISTICS GRID */
 
 .stats-grid {
-    width: 100%;
+  width: 100%;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    gap: 20px;
+  gap: 20px;
 }
 
-
-/* =================================
-   STAT CARD
-================================= */
+/* STAT CARD */
 
 .stat-card {
-    position: relative;
+  position: relative;
 
-    min-height: 145px;
+  min-height: 145px;
 
-    padding: 24px;
+  padding: 24px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    border: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    box-shadow:
-        0 2px 8px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .stat-card::before {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 
-    width: 4px;
-    height: 100%;
+  width: 4px;
+  height: 100%;
 
-    border-radius: 12px 0 0 12px;
+  border-radius: 12px 0 0 12px;
 
-    background-color: #2563eb;
+  background-color: #2563eb;
 }
-
 
 .stat-card:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 
-    box-shadow:
-        0 8px 18px rgba(15, 23, 42, 0.09);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.09);
 }
 
-
-/* =================================
-   CARD TITLE
-================================= */
+/* CARD TITLE */
 
 .stat-card-title {
-    margin: 0;
+  margin: 0;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
-
-/* =================================
-   CARD VALUE
-================================= */
+/* CARD VALUE */
 
 .stat-card-value {
-    margin: 18px 0 0;
+  margin: 18px 0 0;
 
-    color: #111827;
+  color: #111827;
 
-    font-size: 34px;
+  font-size: 34px;
 
-    line-height: 1;
+  line-height: 1;
 
-    font-weight: 700;
+  font-weight: 700;
 }
 
-
-/* =================================
-   RESPONSIVE
-================================= */
+/* RESPONSIVE */
 
 @media (max-width: 1200px) {
-
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-
 @media (max-width: 768px) {
+  .admin-main {
+    width: 100%;
 
-    .admin-main {
+    margin-left: 0;
+  }
 
-        width: 100%;
+  .admin-content {
+    padding: 20px 16px;
+  }
 
-        margin-left: 0;
-    }
+  .stats-grid {
+    grid-template-columns: 1fr;
 
-    .admin-content {
+    gap: 15px;
+  }
 
-        padding: 20px 16px;
-    }
+  .stat-card {
+    min-height: 125px;
 
-    .stats-grid {
+    padding: 20px;
+  }
 
-        grid-template-columns: 1fr;
+  .stat-card-value {
+    font-size: 30px;
+  }
 
-        gap: 15px;
-    }
+  .admin-content h1 {
+    font-size: 24px;
+  }
 
-    .stat-card {
-
-        min-height: 125px;
-
-        padding: 20px;
-    }
-
-    .stat-card-value {
-
-        font-size: 30px;
-    }
-
-    .admin-content h1 {
-
-        font-size: 24px;
-    }
-
-    .dashboard-subtitle {
-
-        font-size: 14px;
-    }
+  .dashboard-subtitle {
+    font-size: 14px;
+  }
 }

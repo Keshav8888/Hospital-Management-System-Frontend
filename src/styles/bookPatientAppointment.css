@@ -1,209 +1,208 @@
 .patient-book-page {
-    min-height: 100vh;
-    background: #f5f7fb;
+  min-height: 100vh;
+  background: #f5f7fb;
 }
 
 .patient-book-main {
-    width: calc(100% - 240px);
-    min-height: 100vh;
-    margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  margin-left: 240px;
 }
 
 .patient-book-content {
-    padding: 32px;
+  padding: 32px;
 }
 
 .patient-book-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .patient-book-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
 }
 
 .patient-book-header h1 {
-    margin: 0;
-    color: #1f2937;
-    font-size: 30px;
+  margin: 0;
+  color: #1f2937;
+  font-size: 30px;
 }
 
 .patient-book-header p {
-    margin: 6px 0 0;
-    color: #6b7280;
+  margin: 6px 0 0;
+  color: #6b7280;
 }
 
 .patient-book-back-button {
-    padding: 10px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 7px;
-    background: #ffffff;
-    color: #374151;
-    cursor: pointer;
-    transition: 0.2s ease;
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .patient-book-back-button:hover {
-    background: #f3f4f6;
-    transform: translateY(-1px);
+  background: #f3f4f6;
+  transform: translateY(-1px);
 }
 
 .patient-book-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .patient-book-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .patient-book-group label {
-    margin-bottom: 7px;
-    color: #374151;
-    font-size: 14px;
-    font-weight: 600;
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .patient-book-group input,
 .patient-book-group select,
 .patient-book-group textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 11px 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 7px;
-    outline: none;
-    background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
 }
 
 .patient-book-group input:focus,
 .patient-book-group select:focus,
 .patient-book-group textarea:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
 }
 
 .patient-book-group select:disabled {
-    background: #f3f4f6;
-    color: #9ca3af;
+  background: #f3f4f6;
+  color: #9ca3af;
 }
 
 .patient-book-group textarea {
-    min-height: 120px;
-    resize: vertical;
+  min-height: 120px;
+  resize: vertical;
 }
 
 .patient-book-full {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .patient-book-actions {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .patient-book-cancel,
 .patient-book-submit {
-    padding: 11px 20px;
-    border-radius: 7px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .patient-book-cancel {
-    border: 1px solid #d1d5db;
-    background: #ffffff;
-    color: #374151;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
 }
 
 .patient-book-cancel:hover {
-    background: #f3f4f6;
+  background: #f3f4f6;
 }
 
 .patient-book-submit {
-    border: none;
-    background: #2563eb;
-    color: #ffffff;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
 }
 
 .patient-book-submit:hover:not(:disabled) {
-    background: #1d4ed8;
-    transform: translateY(-1px);
+  background: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 .patient-book-submit:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .patient-book-error,
 .patient-book-success {
-    margin-bottom: 20px;
-    padding: 12px 15px;
-    border-radius: 7px;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 7px;
 }
 
 .patient-book-error {
-    background: #fee2e2;
-    color: #b91c1c;
+  background: #fee2e2;
+  color: #b91c1c;
 }
 
 .patient-book-success {
-    background: #dcfce7;
-    color: #166534;
+  background: #dcfce7;
+  color: #166534;
 }
 
 .patient-book-message {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #6b7280;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
+  .patient-book-main {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    .patient-book-main {
-        width: 100%;
-        margin-left: 0;
-    }
+  .patient-book-content {
+    padding: 20px 16px;
+  }
 
-    .patient-book-content {
-        padding: 20px 16px;
-    }
+  .patient-book-container {
+    padding: 20px;
+  }
 
-    .patient-book-container {
-        padding: 20px;
-    }
+  .patient-book-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 
-    .patient-book-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+  .patient-book-form {
+    grid-template-columns: 1fr;
+  }
 
-    .patient-book-form {
-        grid-template-columns: 1fr;
-    }
+  .patient-book-full {
+    grid-column: auto;
+  }
 
-    .patient-book-full {
-        grid-column: auto;
-    }
-
-    .patient-book-actions {
-        grid-column: auto;
-        flex-direction: column;
-    }
+  .patient-book-actions {
+    grid-column: auto;
+    flex-direction: column;
+  }
 }

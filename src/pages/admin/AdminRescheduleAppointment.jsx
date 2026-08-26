@@ -182,7 +182,7 @@ function AdminRescheduleAppointment() {
                         className="appointment-back-button"
                         onClick={() =>
                             navigate(
-                                `/admin/appointments/${id}`
+                                `/admin/appointments`
                             )
                         }
                     >
@@ -293,7 +293,7 @@ function AdminRescheduleAppointment() {
                             className="appointment-cancel-button"
                             onClick={() =>
                                 navigate(
-                                    `/admin/appointments/${id}`
+                                    `/admin/appointments`
                                 )
                             }
                         >

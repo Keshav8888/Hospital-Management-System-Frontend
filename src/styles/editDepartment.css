@@ -1,268 +1,263 @@
 .edit-department-page {
-    min-height: 100vh;
-    background-color: #f5f7fb;
-    padding: 40px 30px;
-    box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+  padding: 40px 30px;
+  box-sizing: border-box;
 }
 
 .edit-department-container {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    padding: 30px;
+  padding: 30px;
 
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .edit-department-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .edit-department-header h1 {
-    margin: 0;
+  margin: 0;
 
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 30px;
+  font-size: 30px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .edit-department-header p {
-    margin: 6px 0 0;
+  margin: 6px 0 0;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .department-back-button {
-    padding: 10px 16px;
+  padding: 10px 16px;
 
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    color: #374151;
+  color: #374151;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .department-back-button:hover {
-    background-color: #f3f4f6;
+  background-color: #f3f4f6;
 
-    border-color: #9ca3af;
+  border-color: #9ca3af;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .edit-department-form {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+  gap: 20px;
 }
 
 .department-form-group {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .department-form-group label {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 
-    color: #374151;
+  color: #374151;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .department-form-group input,
 .department-form-group textarea {
-    width: 100%;
+  width: 100%;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    padding: 11px 12px;
+  padding: 11px 12px;
 
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    outline: none;
+  outline: none;
 }
 
 .department-form-group input:focus,
 .department-form-group textarea:focus {
-    border-color: #2563eb;
+  border-color: #2563eb;
 
-    box-shadow:
-        0 0 0 2px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
 }
 
 .department-form-group textarea {
-    min-height: 120px;
+  min-height: 120px;
 
-    resize: vertical;
+  resize: vertical;
 }
 
 .department-full-width {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .department-form-actions {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 
-    display: flex;
+  display: flex;
 
-    justify-content: flex-end;
+  justify-content: flex-end;
 
-    gap: 12px;
+  gap: 12px;
 }
 
 .department-cancel-button,
 .department-update-button {
-    padding: 11px 20px;
+  padding: 11px 20px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .department-cancel-button {
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    color: #374151;
+  color: #374151;
 }
 
 .department-cancel-button:hover {
-    background: #f3f4f6;
+  background: #f3f4f6;
 
-    border-color: #9ca3af;
+  border-color: #9ca3af;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .department-update-button {
-    border: none;
+  border: none;
 
-    background: #2563eb;
+  background: #2563eb;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    box-shadow:
-        0 6px 14px rgba(37, 99, 235, 0.20);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.2);
 }
 
 .department-update-button:hover:not(:disabled) {
-    background: #1d4ed8;
+  background: #1d4ed8;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 
-    box-shadow:
-        0 8px 18px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
 }
 
 .department-update-button:disabled {
-    opacity: 0.6;
+  opacity: 0.6;
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .department-form-error,
 .department-form-success {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    padding: 12px 15px;
+  padding: 12px 15px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 }
 
 .department-form-error {
-    background: #fee2e2;
+  background: #fee2e2;
 
-    color: #b91c1c;
+  color: #b91c1c;
 }
 
 .department-form-success {
-    background: #dcfce7;
+  background: #dcfce7;
 
-    color: #166534;
+  color: #166534;
 }
 
 .edit-department-message {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
 
-    color: #6b7280;
+  color: #6b7280;
 }
 
 @media (max-width: 700px) {
+  .edit-department-page {
+    padding: 20px 15px;
+  }
 
-    .edit-department-page {
-        padding: 20px 15px;
-    }
+  .edit-department-container {
+    padding: 20px;
+  }
 
-    .edit-department-container {
-        padding: 20px;
-    }
+  .edit-department-header {
+    flex-direction: column;
 
-    .edit-department-header {
-        flex-direction: column;
+    align-items: flex-start;
 
-        align-items: flex-start;
+    gap: 15px;
+  }
 
-        gap: 15px;
-    }
+  .edit-department-form {
+    grid-template-columns: 1fr;
+  }
 
-    .edit-department-form {
-        grid-template-columns: 1fr;
-    }
+  .department-full-width {
+    grid-column: auto;
+  }
 
-    .department-full-width {
-        grid-column: auto;
-    }
+  .department-form-actions {
+    grid-column: auto;
 
-    .department-form-actions {
-        grid-column: auto;
-
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }

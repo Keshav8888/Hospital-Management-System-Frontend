@@ -49,7 +49,7 @@
 }
 
 .logout-button:hover {
-    background: #b61d1d;
+  background: #b61d1d;
 
   transform: translateY(-1px);
 }

@@ -1,202 +1,189 @@
 .admin-appointment-details-page {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    background-color: #f5f7fb;
+  background-color: #f5f7fb;
 
-    padding: 40px 30px;
+  padding: 40px 30px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .admin-appointment-details-container {
-    max-width: 1050px;
+  max-width: 1050px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .admin-appointment-details-header {
-    display: flex;
+  display: flex;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    align-items: center;
+  align-items: center;
 
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .admin-appointment-details-header h1 {
-    margin: 0;
+  margin: 0;
 
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 30px;
+  font-size: 30px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .admin-appointment-details-header p {
-    margin: 6px 0 0;
+  margin: 6px 0 0;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .appointment-back-button {
-    padding: 10px 16px;
+  padding: 10px 16px;
 
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    color: #374151;
+  color: #374151;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .appointment-back-button:hover {
-    background-color: #f3f4f6;
+  background-color: #f3f4f6;
 
-    border-color: #9ca3af;
+  border-color: #9ca3af;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .admin-appointment-details-card {
-    width: 100%;
+  width: 100%;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .appointment-detail-row {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 230px 1fr;
+  grid-template-columns: 230px 1fr;
 
-    align-items: center;
+  align-items: center;
 
-    padding: 18px 25px;
+  padding: 18px 25px;
 
-    border-bottom: 1px solid #edf0f2;
+  border-bottom: 1px solid #edf0f2;
 }
 
 .appointment-detail-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .appointment-detail-row span:first-child {
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .appointment-detail-row strong {
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
-
-
-/* ===============================
-   STATUS
-================================ */
+/* STATUS */
 
 .appointment-details-status {
-    width: fit-content;
+  width: fit-content;
 
-    padding: 5px 11px;
+  padding: 5px 11px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .appointment-details-status-booked {
-    background-color: #dbeafe;
+  background-color: #dbeafe;
 
-    color: #1d4ed8;
+  color: #1d4ed8;
 }
 
 .appointment-details-status-confirmed {
-    background-color: #dcfce7;
+  background-color: #dcfce7;
 
-    color: #166534;
+  color: #166534;
 }
 
 .appointment-details-status-completed {
-    background-color: #e0e7ff;
+  background-color: #e0e7ff;
 
-    color: #3730a3;
+  color: #3730a3;
 }
 
 .appointment-details-status-cancelled {
-    background-color: #fee2e2;
+  background-color: #fee2e2;
 
-    color: #b91c1c;
+  color: #b91c1c;
 }
-
-
-/* ===============================
-   MESSAGE
-================================ */
+/* MESSAGE */
 
 .admin-appointment-details-message {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
 
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 18px;
+  font-size: 18px;
 }
 
-
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
+  .admin-appointment-details-page {
+    padding: 20px 15px;
+  }
 
-    .admin-appointment-details-page {
-        padding: 20px 15px;
-    }
+  .admin-appointment-details-header {
+    flex-direction: column;
 
-    .admin-appointment-details-header {
-        flex-direction: column;
+    align-items: flex-start;
 
-        align-items: flex-start;
+    gap: 15px;
+  }
 
-        gap: 15px;
-    }
+  .appointment-detail-row {
+    grid-template-columns: 1fr;
 
-    .appointment-detail-row {
-        grid-template-columns: 1fr;
+    gap: 7px;
 
-        gap: 7px;
-
-        padding: 15px 18px;
-    }
+    padding: 15px 18px;
+  }
 }

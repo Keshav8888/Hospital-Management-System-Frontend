@@ -1,388 +1,354 @@
-/* ================================
-   DOCTORS PAGE
-================================ */
+/* DOCTORS PAGE */
 
 .doctors-page {
-    min-height: 100vh;
-    background-color: #f5f7fb;
+  min-height: 100vh;
+  background-color: #f5f7fb;
 }
 
 .doctors-main {
-    margin-left: 240px;
-    min-height: 100vh;
+  margin-left: 240px;
+  min-height: 100vh;
 }
 
 .doctors-content {
-    padding: 30px;
+  padding: 30px;
 }
 
-
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 
 .doctors-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .doctors-header h1 {
-    margin: 0;
-    font-size: 30px;
-    /* font-weight: 600; */
-    color: #1f2937;
+  margin: 0;
+  font-size: 30px;
+  color: #1f2937;
 }
 
 .doctors-subtitle {
-    margin: 6px 0 0;
-    color: #6b7280;
-    font-size: 15px;
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 15px;
 }
 
-
-/* ================================
-   ADD BUTTON
-================================ */
+/* ADD BUTTON */
 
 .add-doctor-button {
-    border: none;
-    background-color: #2563eb;
-    color: white;
+  border: none;
+  background-color: #2563eb;
+  color: white;
 
-    padding: 11px 18px;
+  padding: 11px 18px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .add-doctor-button:hover {
-    background-color: #1d4ed8;
+  background-color: #1d4ed8;
 }
 
-
-/* ================================
-   SEARCH AREA
-================================ */
+/* SEARCH AREA */
 
 .doctors-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background-color: white;
+  background-color: white;
 
-    padding: 18px;
+  padding: 18px;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .doctor-search-form {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .doctor-search-input {
-    width: 320px;
+  width: 320px;
 
-    padding: 10px 12px;
+  padding: 10px 12px;
 
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    outline: none;
+  outline: none;
 }
 
 .doctor-search-input:focus {
-    border-color: #2563eb;
+  border-color: #2563eb;
 }
 
 .doctor-search-button {
-    border: none;
+  border: none;
 
-    background-color: #2563eb;
+  background-color: #2563eb;
 
-    color: white;
+  color: white;
 
-    padding: 10px 18px;
+  padding: 10px 18px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .doctor-search-button:hover {
-    background-color: #1d4ed8;
+  background-color: #1d4ed8;
 }
 
-
-/* ================================
-   TABLE CONTAINER
-================================ */
+/* TABLE CONTAINER */
 
 .doctors-table-container {
-    background-color: white;
+  background-color: white;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    overflow-x: auto;
+  overflow-x: auto;
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .doctors-table {
-    width: 100%;
+  width: 100%;
 
-    border-collapse: collapse;
+  border-collapse: collapse;
 
-    min-width: 1100px;
+  min-width: 1100px;
 }
 
 .doctors-table th {
-    background-color: #f8fafc;
+  background-color: #f8fafc;
 
-    color: #374151;
+  color: #374151;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    font-weight: 600;
+  font-weight: 600;
 
-    text-align: left;
+  text-align: left;
 
-    padding: 15px;
+  padding: 15px;
 
-    border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .doctors-table td {
-    padding: 15px;
+  padding: 15px;
 
-    border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 
-    color: #4b5563;
+  color: #4b5563;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .doctors-table tbody tr:hover {
-    background-color: #f8fafc;
+  background-color: #f8fafc;
 }
 
-
-/* ================================
-   SORTABLE HEADERS
-================================ */
+/* SORTABLE HEADERS */
 
 .sortable-header {
-    cursor: pointer;
+  cursor: pointer;
 
-    user-select: none;
+  user-select: none;
 }
 
 .sortable-header:hover {
-    color: #2563eb;
+  color: #2563eb;
 }
 
-
-/* ================================
-   STATUS
-================================ */
+/* STATUS */
 
 .status-badge {
-    display: inline-block;
+  display: inline-block;
 
-    padding: 5px 10px;
+  padding: 5px 10px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .status-active {
-    background-color: #dcfce7;
-    color: #166534;
+  background-color: #dcfce7;
+  color: #166534;
 }
 
 .status-inactive {
-    background-color: #fee2e2;
-    color: #b91c1c;
+  background-color: #fee2e2;
+  color: #b91c1c;
 }
 
-
-/* ================================
-   ACTION BUTTONS
-================================ */
+/* ACTION BUTTONS */
 
 .doctor-actions {
-    display: flex;
+  display: flex;
 
-    gap: 7px;
+  gap: 7px;
 
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .view-button,
 .edit-button,
 .deactivate-button {
-    border: none;
+  border: none;
 
-    padding: 7px 11px;
+  padding: 7px 11px;
 
-    border-radius: 6px;
+  border-radius: 6px;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .view-button {
-    background-color: #e0f2fe;
-    color: #0369a1;
+  background-color: #e0f2fe;
+  color: #0369a1;
 }
 
 .edit-button {
-    background-color: #fef3c7;
-    color: #92400e;
+  background-color: #fef3c7;
+  color: #92400e;
 }
 
 .deactivate-button {
-    background-color: #fee2e2;
-    color: #b91c1c;
+  background-color: #fee2e2;
+  color: #b91c1c;
 }
 
-
-/* ================================
-   PAGINATION
-================================ */
+/* PAGINATION */
 
 .doctors-pagination {
-    display: flex;
+  display: flex;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    align-items: center;
+  align-items: center;
 
-    padding: 18px;
+  padding: 18px;
 
-    background-color: white;
+  background-color: white;
 
-    border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
 }
 
 .pagination-buttons {
-    display: flex;
+  display: flex;
 
-    gap: 8px;
+  gap: 8px;
 }
 
 .pagination-button {
-    border: 1px solid #d1d5db;
+  border: 1px solid #d1d5db;
 
-    background-color: white;
+  background-color: white;
 
-    color: #374151;
+  color: #374151;
 
-    padding: 8px 14px;
+  padding: 8px 14px;
 
-    border-radius: 6px;
+  border-radius: 6px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .pagination-button:hover:not(:disabled) {
-    background-color: #f3f4f6;
+  background-color: #f3f4f6;
 }
 
 .pagination-button:disabled {
-    opacity: 0.5;
+  opacity: 0.5;
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
-
-/* ================================
-   LOADING / ERROR
-================================ */
+/* LOADING / ERROR */
 
 .doctors-message {
-    padding: 40px;
+  padding: 40px;
 
-    text-align: center;
+  text-align: center;
 
-    color: #6b7280;
+  color: #6b7280;
 }
 
 .doctors-error {
-    padding: 15px;
+  padding: 15px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background-color: #fee2e2;
+  background-color: #fee2e2;
 
-    color: #b91c1c;
+  color: #b91c1c;
 }
 
-
-/* ================================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
+  .doctors-main {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    .doctors-main {
-        width: 100%;
-        margin-left: 0;
-    }
+  .doctors-content {
+    padding: 20px 16px;
+  }
 
-    .doctors-content {
-        padding: 20px 16px;
-    }
+  .doctors-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 
-    .doctors-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+  .doctors-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
 
-    .doctors-toolbar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px;
-    }
+  .doctor-search-form {
+    flex-direction: column;
+  }
 
-    .doctor-search-form {
-        flex-direction: column;
-    }
+  .doctor-search-input {
+    width: 100%;
+  }
 
-    .doctor-search-input {
-        width: 100%;
-    }
-
-    .doctors-pagination {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
+  .doctors-pagination {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
 }

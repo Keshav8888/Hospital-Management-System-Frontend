@@ -1,159 +1,157 @@
 .receptionist-profile-page {
-    min-height: 100vh;
-    background-color: #f5f7fb;
+  min-height: 100vh;
+  background-color: #f5f7fb;
 }
 
 .receptionist-profile-main {
-    width: calc(100% - 240px);
-    min-height: 100vh;
-    margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  margin-left: 240px;
 }
 
 .receptionist-profile-content {
-    padding: 32px;
+  padding: 32px;
 }
 
 .receptionist-profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .receptionist-profile-header h1 {
-    margin: 0;
-    color: #1f2937;
-    font-size: 30px;
-    font-weight: 600;
+  margin: 0;
+  color: #1f2937;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .receptionist-profile-header p {
-    margin: 6px 0 0;
-    color: #6b7280;
-    font-size: 14px;
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
 }
 
 .profile-edit-button {
-    padding: 11px 18px;
+  padding: 11px 18px;
 
-    border: none;
-    border-radius: 7px;
+  border: none;
+  border-radius: 7px;
 
-    background-color: #2563eb;
-    color: #ffffff;
+  background-color: #2563eb;
+  color: #ffffff;
 
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .profile-edit-button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-1px);
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 .receptionist-profile-card {
-    max-width: 1000px;
+  max-width: 1000px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    border-radius: 12px;
+  border-radius: 12px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .profile-detail-row {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px 1fr;
 
-    align-items: center;
+  align-items: center;
 
-    padding: 18px 25px;
+  padding: 18px 25px;
 
-    border-bottom: 1px solid #edf0f2;
+  border-bottom: 1px solid #edf0f2;
 }
 
 .profile-detail-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .profile-detail-row span:first-child {
-    color: #6b7280;
+  color: #6b7280;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .profile-detail-row strong {
-    color: #1f2937;
+  color: #1f2937;
 
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .profile-status {
-    width: fit-content;
+  width: fit-content;
 
-    padding: 5px 11px;
+  padding: 5px 11px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .profile-status-active {
-    background-color: #dcfce7;
-    color: #166534;
+  background-color: #dcfce7;
+  color: #166534;
 }
 
 .profile-status-inactive {
-    background-color: #fee2e2;
-    color: #b91c1c;
+  background-color: #fee2e2;
+  color: #b91c1c;
 }
 
 .receptionist-profile-message {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
 
-    color: #6b7280;
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
+  .receptionist-profile-main {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    .receptionist-profile-main {
-        width: 100%;
-        margin-left: 0;
-    }
+  .receptionist-profile-content {
+    padding: 20px 16px;
+  }
 
-    .receptionist-profile-content {
-        padding: 20px 16px;
-    }
+  .receptionist-profile-header {
+    flex-direction: column;
 
-    .receptionist-profile-header {
-        flex-direction: column;
+    align-items: flex-start;
 
-        align-items: flex-start;
+    gap: 15px;
+  }
 
-        gap: 15px;
-    }
+  .profile-detail-row {
+    grid-template-columns: 1fr;
 
-    .profile-detail-row {
-        grid-template-columns: 1fr;
+    gap: 7px;
 
-        gap: 7px;
-
-        padding: 15px 18px;
-    }
+    padding: 15px 18px;
+  }
 }

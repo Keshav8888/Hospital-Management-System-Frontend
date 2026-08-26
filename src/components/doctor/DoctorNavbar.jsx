@@ -8,7 +8,7 @@ function DoctorNavbar({ onMenuClick }) {
   const handleLogout = () => {
     logoutUser();
 
-    navigate("/login");
+    navigate("/");
   };
   return (
     <header className="doctor-navbar">
